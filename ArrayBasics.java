@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.HashSet;
 
 public class ArrayBasics {
     //Create frequency array for the given array
@@ -45,6 +46,7 @@ public class ArrayBasics {
         }
         System.out.println("Array after reverse : " + Arrays.toString(arr));
     }
+
     
     //swap without using temp variable
     static void swapWithoutTemp(int a, int b) {

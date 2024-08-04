@@ -43,7 +43,6 @@ public class Strings {
         }
 
         System.out.println("Reversed String : " + sb);
-        
        
     }   
 }
