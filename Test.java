@@ -77,6 +77,23 @@ public class Test {
             return false;
         }
     }
+
+    //using sliding window
+    //getting the least value from the arr B of length m extracted from arr A of length n of function fun(m) = max(m) - min(m) 
+    static int funOpt(int arr[], int m) {
+        Arrays.sort(arr);
+        int minDiff = Integer.MAX_VALUE;
+        for(int i=0; i<=arr.length-m; i++) {
+            int currDiff = arr[i+m-1] - arr[i];
+            if(currDiff < minDiff) {
+                minDiff = currDiff;
+            }
+        }
+
+        return minDiff;
+    }
+
+
     public static void main(String[] args) {
         // Scanner sc = new Scanner(System.in);
         // System.out.println("Enter the url : ");
@@ -121,6 +138,14 @@ public class Test {
             }
         }
 
-        
+
+        // Scanner sc = new Scanner(System.in);
+        // int n = sc.nextInt();
+        // int m = sc.nextInt();
+        // int arr[] = new int[n];
+        // for(int i=0; i<n; i++) {
+        //     arr[i] = sc.nextInt();
+        // }
+        // System.out.println(funOpt(arr, m));
     }
 }
